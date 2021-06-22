@@ -1,13 +1,15 @@
 class GraphsController < ApplicationController
 
-  def index
-  @graphs = Graph.all 
+    def index
+    @graphs = Graph.all 
 
-  render json: @graphs
-  end
+    render json: @graphs
+    end
 
     def create
-    @new_graph = Graph.create!(stock_sym: params[:stock_sym], 
+    @new_graph = Graph.create!(
+    project_id: params[:project],
+    stock_sym: params[:stock_sym], 
     x_axis_array: params[:x_axis_array], 
     proj_low_array: params[:proj_low_array], 
     proj_high_array: params[:proj_high_array], 

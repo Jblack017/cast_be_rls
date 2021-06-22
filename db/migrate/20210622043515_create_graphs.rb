@@ -6,7 +6,7 @@ class CreateGraphs < ActiveRecord::Migration[6.1]
       t.string :proj_low_array
       t.string :proj_high_array
       t.string :proj_array
-
+      
       t.timestamps
     end
   end

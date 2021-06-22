@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_043515) do
+ActiveRecord::Schema.define(version: 2021_06_22_195426) do
 
   create_table "graphs", force: :cascade do |t|
     t.string "stock_sym"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2021_06_22_043515) do
     t.string "proj_array"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "project_id", null: false
+    t.index ["project_id"], name: "index_graphs_on_project_id"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "graphs", "projects"
 end
