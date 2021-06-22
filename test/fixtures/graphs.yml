@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_sym: MyString
+  x_axis_array: MyString
+  proj_low_array: MyString
+  proj_high_array: MyString
+  proj_array: MyString
+
+two:
+  stock_sym: MyString
+  x_axis_array: MyString
+  proj_low_array: MyString
+  proj_high_array: MyString
+  proj_array: MyString
