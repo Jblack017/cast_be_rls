@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all 
 
-    render json: @projects
+    render json: @projects, include: :graphs
   end
 
   def show
